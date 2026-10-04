@@ -110,6 +110,12 @@
     "categories": ["restaurants"]
   },
   {
+    "id": "sarabeth-tokyo",
+    "name": "Sarabeth's",
+    "searchNameJa": "サラベス東京店",
+    "categories": ["restaurants"]
+  },
+  {
     "id": "the-bvlgari-bar",
     "name": "Bulgari Ginza Bar",
     "searchNameJa": "ブルガリギンザ・バー",
@@ -131,6 +137,12 @@
     "id": "rooftop-bar-piro-ginza",
     "name": "Rooftop Bar Piro Ginza",
     "searchNameJa": "GINZA HOTEL by GRANBELL",
+    "categories": ["restaurants", "nightlife"]
+  },
+   {
+    "id": "hotel-indigo-shibuya",
+    "name": "Hotel Indigo",
+    "searchNameJa": "ホテルインディゴ",
     "categories": ["restaurants", "nightlife"]
   },
 
