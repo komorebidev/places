@@ -1,110 +1,10 @@
 // ============================================================
-// COUNTRY REGIONS
+// SITE COUNTRY
 // ============================================================
 
-const countryRegions = {
-    "north-america": {
-        name: "North America",
-        countries: {
-            US: { name: "United States", flag: "🇺🇸" },
-            CA: { name: "Canada", flag: "🇨🇦" },
-            MX: { name: "Mexico", flag: "🇲🇽" },
-            GT: { name: "Guatemala", flag: "🇬🇹" },
-            CR: { name: "Costa Rica", flag: "🇨🇷" },
-            PA: { name: "Panama", flag: "🇵🇦" },
-            CU: { name: "Cuba", flag: "🇨🇺" },
-            DO: { name: "Dominican Republic", flag: "🇩🇴" },
-            JM: { name: "Jamaica", flag: "🇯🇲" },
-            BS: { name: "Bahamas", flag: "🇧🇸" },
-            BB: { name: "Barbados", flag: "🇧🇧" },
-            TT: { name: "Trinidad and Tobago", flag: "🇹🇹" }
-        }
-    },
-
-    europe: {
-        name: "Europe",
-        countries: {
-            GB: { name: "United Kingdom", flag: "🇬🇧" },
-            IE: { name: "Ireland", flag: "🇮🇪" },
-            FR: { name: "France", flag: "🇫🇷" },
-            DE: { name: "Germany", flag: "🇩🇪" },
-            ES: { name: "Spain", flag: "🇪🇸" },
-            PT: { name: "Portugal", flag: "🇵🇹" },
-            IT: { name: "Italy", flag: "🇮🇹" },
-            CH: { name: "Switzerland", flag: "🇨🇭" },
-            AT: { name: "Austria", flag: "🇦🇹" },
-            BE: { name: "Belgium", flag: "🇧🇪" },
-            NL: { name: "Netherlands", flag: "🇳🇱" },
-            LU: { name: "Luxembourg", flag: "🇱🇺" },
-            DK: { name: "Denmark", flag: "🇩🇰" },
-            SE: { name: "Sweden", flag: "🇸🇪" },
-            NO: { name: "Norway", flag: "🇳🇴" },
-            FI: { name: "Finland", flag: "🇫🇮" },
-            IS: { name: "Iceland", flag: "🇮🇸" },
-            PL: { name: "Poland", flag: "🇵🇱" },
-            CZ: { name: "Czechia", flag: "🇨🇿" },
-            SK: { name: "Slovakia", flag: "🇸🇰" },
-            HU: { name: "Hungary", flag: "🇭🇺" },
-            RO: { name: "Romania", flag: "🇷🇴" },
-            BG: { name: "Bulgaria", flag: "🇧🇬" },
-            GR: { name: "Greece", flag: "🇬🇷" },
-            HR: { name: "Croatia", flag: "🇭🇷" },
-            SI: { name: "Slovenia", flag: "🇸🇮" },
-            EE: { name: "Estonia", flag: "🇪🇪" },
-            LV: { name: "Latvia", flag: "🇱🇻" },
-            LT: { name: "Lithuania", flag: "🇱🇹" },
-            UA: { name: "Ukraine", flag: "🇺🇦" },
-            RS: { name: "Serbia", flag: "🇷🇸" },
-            AL: { name: "Albania", flag: "🇦🇱" },
-            BA: { name: "Bosnia and Herzegovina", flag: "🇧🇦" },
-            ME: { name: "Montenegro", flag: "🇲🇪" },
-            MK: { name: "North Macedonia", flag: "🇲🇰" },
-            MD: { name: "Moldova", flag: "🇲🇩" },
-            CY: { name: "Cyprus", flag: "🇨🇾" },
-            MT: { name: "Malta", flag: "🇲🇹" }
-        }
-    },
-
-    asia: {
-        name: "Asia",
-        countries: {
-            JP: { name: "Japan", flag: "🇯🇵" },
-            KR: { name: "South Korea", flag: "🇰🇷" },
-            CN: { name: "China", flag: "🇨🇳" },
-            TW: { name: "Taiwan", flag: "🇹🇼" },
-            HK: { name: "Hong Kong", flag: "🇭🇰" },
-            MO: { name: "Macau", flag: "🇲🇴" },
-            IN: { name: "India", flag: "🇮🇳" },
-            TH: { name: "Thailand", flag: "🇹🇭" },
-            VN: { name: "Vietnam", flag: "🇻🇳" },
-            SG: { name: "Singapore", flag: "🇸🇬" },
-            MY: { name: "Malaysia", flag: "🇲🇾" },
-            ID: { name: "Indonesia", flag: "🇮🇩" },
-            PH: { name: "Philippines", flag: "🇵🇭" },
-            KH: { name: "Cambodia", flag: "🇰🇭" },
-            LA: { name: "Laos", flag: "🇱🇦" },
-            MM: { name: "Myanmar", flag: "🇲🇲" },
-            BN: { name: "Brunei", flag: "🇧🇳" },
-            NP: { name: "Nepal", flag: "🇳🇵" },
-            LK: { name: "Sri Lanka", flag: "🇱🇰" },
-            BD: { name: "Bangladesh", flag: "🇧🇩" },
-            PK: { name: "Pakistan", flag: "🇵🇰" },
-            AE: { name: "United Arab Emirates", flag: "🇦🇪" },
-            SA: { name: "Saudi Arabia", flag: "🇸🇦" },
-            IL: { name: "Israel", flag: "🇮🇱" },
-            TR: { name: "Türkiye", flag: "🇹🇷" },
-            QA: { name: "Qatar", flag: "🇶🇦" },
-            JO: { name: "Jordan", flag: "🇯🇴" },
-            LB: { name: "Lebanon", flag: "🇱🇧" },
-            MN: { name: "Mongolia", flag: "🇲🇳" },
-            KZ: { name: "Kazakhstan", flag: "🇰🇿" },
-            UZ: { name: "Uzbekistan", flag: "🇺🇿" },
-            GE: { name: "Georgia", flag: "🇬🇪" },
-            AM: { name: "Armenia", flag: "🇦🇲" },
-            AZ: { name: "Azerbaijan", flag: "🇦🇿" }
-        }
-    }
-};
+const SITE_COUNTRY = "JP";
+const SITE_COUNTRY_NAME = "Japan";
+const SITE_COUNTRY_FLAG = "🇯🇵";
 
 
 // ============================================================
@@ -113,6 +13,7 @@ const countryRegions = {
 
 const DESCRIPTION_PLACEHOLDER = "Description unavailable.";
 const ADDRESS_PLACEHOLDER = "Address unavailable.";
+
 const YAHOO_APP_ID =
     window.APP_CONFIG?.yahooAppId || "";
 
@@ -122,7 +23,7 @@ let yahooRequestQueue =
 const placeCache = {};
 
 let places = [];
-let currentCountry = "JP";
+let currentCountry = SITE_COUNTRY;
 let currentCategory = "all";
 let countryLoadGeneration = 0;
 
@@ -136,12 +37,6 @@ const countryNameElement =
 
 const countryFlagElement =
     document.getElementById("countryFlag");
-
-const regionSelect =
-    document.getElementById("regionSelect");
-
-const countrySelect =
-    document.getElementById("countrySelect");
 
 const placesContainer =
     document.getElementById("placesContainer");
@@ -288,30 +183,9 @@ async function loadPlaces() {
 function initializeApplication() {
 
     setupCategoryButtons();
-    setupRegionSelector();
-    setupCountrySelector();
-
-    const urlCountry =
-        getCountryFromURL();
 
     const urlCategory =
         getCategoryFromURL();
-
-    if (
-        urlCountry &&
-        countryExists(urlCountry)
-    ) {
-
-        currentCountry =
-            urlCountry;
-
-    } else {
-
-        currentCountry =
-            "JP";
-
-        detectVisitorCountry();
-    }
 
     if (
         urlCategory &&
@@ -322,9 +196,18 @@ function initializeApplication() {
             urlCategory;
     }
 
-    populateRegionForCountry(
-        currentCountry
-    );
+    /*
+     * The site is permanently Japan-only.
+     *
+     * There is intentionally NO:
+     *
+     * - IP detection
+     * - visitor country detection
+     * - country selector
+     * - region selector
+     */
+    currentCountry =
+        SITE_COUNTRY;
 
     updateCountryDisplay();
 
@@ -333,57 +216,6 @@ function initializeApplication() {
     render();
 
     loadVisiblePlaceData();
-}
-
-
-// ============================================================
-// COUNTRY DETECTION
-// ============================================================
-
-async function detectVisitorCountry() {
-
-    try {
-
-        const response =
-            await fetch(
-                "https://ipapi.co/json/"
-            );
-
-        if (!response.ok) {
-
-            throw new Error(
-                `Country detection HTTP ${response.status}`
-            );
-        }
-
-        const data =
-            await response.json();
-
-        const detectedCountry =
-            String(
-                data.country || ""
-            ).toUpperCase();
-
-        const urlCountry =
-            getCountryFromURL();
-
-        if (
-            !urlCountry &&
-            countryExists(detectedCountry)
-        ) {
-
-            setCountry(
-                detectedCountry
-            );
-        }
-
-    } catch (error) {
-
-        console.warn(
-            "Country detection failed:",
-            error
-        );
-    }
 }
 
 
@@ -439,251 +271,21 @@ function updateCategoryButtons() {
 
 
 // ============================================================
-// REGION SELECTOR
+// COUNTRY DISPLAY
 // ============================================================
-
-function setupRegionSelector() {
-
-    if (!regionSelect) {
-        return;
-    }
-
-    regionSelect.addEventListener(
-        "change",
-        function () {
-
-            const region =
-                this.value;
-
-            populateCountries(region);
-
-            if (!region) {
-                return;
-            }
-
-            const countryCodes =
-                Object.keys(
-                    countryRegions[region]
-                        .countries
-                );
-
-            if (!countryCodes.length) {
-                return;
-            }
-
-            setCountry(
-                countryCodes[0]
-            );
-        }
-    );
-}
-
-
-function populateCountries(
-    regionKey
-) {
-
-    if (!countrySelect) {
-        return;
-    }
-
-    countrySelect.innerHTML = `
-        <option value="">
-            Select country
-        </option>
-    `;
-
-    if (
-        !regionKey ||
-        !countryRegions[regionKey]
-    ) {
-        return;
-    }
-
-    const countries =
-        countryRegions[regionKey]
-            .countries;
-
-    Object.entries(countries)
-        .forEach(
-            ([code, country]) => {
-
-                const option =
-                    document.createElement(
-                        "option"
-                    );
-
-                option.value =
-                    code;
-
-                option.textContent =
-                    `${country.flag} ${country.name}`;
-
-                countrySelect
-                    .appendChild(option);
-            }
-        );
-}
-
-
-// ============================================================
-// COUNTRY SELECTOR
-// ============================================================
-
-function setupCountrySelector() {
-
-    if (!countrySelect) {
-        return;
-    }
-
-    countrySelect.addEventListener(
-        "change",
-        function () {
-
-            if (!this.value) {
-                return;
-            }
-
-            setCountry(
-                this.value
-            );
-        }
-    );
-}
-
-
-function setCountry(
-    countryCode
-) {
-
-    if (
-        !countryExists(countryCode)
-    ) {
-        return;
-    }
-
-    /*
-     * Every country selection gets its own generation. Responses
-     * from earlier selections must never update the current UI.
-     */
-    countryLoadGeneration += 1;
-
-    currentCountry =
-        countryCode;
-
-    /*
-     * Location data depends on country,
-     * so clear all cached location data.
-     */
-    Object.keys(placeCache)
-        .forEach(id => {
-
-            const cache =
-                placeCache[id];
-
-            if (cache) {
-
-                cache.loaded =
-                    false;
-
-                cache.loading =
-                    false;
-
-                cache.location =
-                    null;
-
-                cache.description =
-                    null;
-
-                cache.image =
-                    null;
-
-                cache.countryCode =
-                    null;
-
-                cache.generation =
-                    null;
-            }
-        });
-
-    populateRegionForCountry(
-        currentCountry
-    );
-
-    updateCountryDisplay();
-
-    updateURL();
-
-    render();
-
-    loadVisiblePlaceData();
-}
-
 
 function updateCountryDisplay() {
-
-    const info =
-        getCountryInfo(
-            currentCountry
-        );
-
-    if (!info) {
-        return;
-    }
 
     if (countryNameElement) {
 
         countryNameElement.textContent =
-            info.name;
+            SITE_COUNTRY_NAME;
     }
 
     if (countryFlagElement) {
 
         countryFlagElement.textContent =
-            info.flag;
-    }
-
-    if (countrySelect) {
-
-        countrySelect.value =
-            currentCountry;
-    }
-
-    if (regionSelect) {
-
-        regionSelect.value =
-            info.region;
-    }
-}
-
-
-function populateRegionForCountry(
-    countryCode
-) {
-
-    const info =
-        getCountryInfo(
-            countryCode
-        );
-
-    if (!info) {
-        return;
-    }
-
-    if (regionSelect) {
-
-        regionSelect.value =
-            info.region;
-    }
-
-    populateCountries(
-        info.region
-    );
-
-    if (countrySelect) {
-
-        countrySelect.value =
-            countryCode;
+            SITE_COUNTRY_FLAG;
     }
 }
 
@@ -692,68 +294,15 @@ function populateRegionForCountry(
 // COUNTRY HELPERS
 // ============================================================
 
-function countryExists(
-    countryCode
-) {
+/*
+ * The site is Japan-only.
+ *
+ * This function remains because other API functions use the
+ * country name when constructing search queries.
+ */
+function getCountryName() {
 
-    if (!countryCode) {
-        return false;
-    }
-
-    for (
-        const regionKey in countryRegions
-    ) {
-
-        if (
-            countryRegions[regionKey]
-                .countries[countryCode]
-        ) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-
-function getCountryInfo(
-    countryCode
-) {
-
-    for (
-        const regionKey in countryRegions
-    ) {
-
-        const region =
-            countryRegions[regionKey];
-
-        if (
-            region.countries[countryCode]
-        ) {
-
-            return {
-                ...region.countries[countryCode],
-                region: regionKey
-            };
-        }
-    }
-
-    return null;
-}
-
-
-function getCountryName(
-    countryCode
-) {
-
-    const info =
-        getCountryInfo(
-            countryCode
-        );
-
-    return info
-        ? info.name
-        : "";
+    return SITE_COUNTRY_NAME;
 }
 
 
@@ -815,7 +364,7 @@ function render() {
 async function loadVisiblePlaceData() {
 
     const countryForRequest =
-        currentCountry;
+        SITE_COUNTRY;
 
     const requestGeneration =
         countryLoadGeneration;
@@ -861,11 +410,7 @@ async function loadVisiblePlaceData() {
         currentCountry === countryForRequest &&
         countryLoadGeneration === requestGeneration
     ) {
-        /*
-         * Replace the complete skeleton grid at once. Filtering
-         * country mismatches card-by-card would shift the page while
-         * requests finish at different times.
-         */
+
         renderCards();
     }
 }
@@ -877,7 +422,7 @@ async function loadVisiblePlaceData() {
 
 async function loadPlaceData(
     place,
-    countryForRequest = currentCountry,
+    countryForRequest = SITE_COUNTRY,
     requestGeneration = countryLoadGeneration
 ) {
 
@@ -945,7 +490,7 @@ async function loadPlaceData(
         const locationPromise =
             getPlaceLocation(
                 place,
-                countryForRequest
+                SITE_COUNTRY
             );
 
         /*
@@ -961,7 +506,7 @@ async function loadPlaceData(
                 ? Promise.resolve("")
                 : getWikipediaDescription(
                     place,
-                    countryForRequest
+                    SITE_COUNTRY
                 );
 
         /*
@@ -977,7 +522,7 @@ async function loadPlaceData(
                 ? Promise.resolve(null)
                 : getWikimediaImage(
                     place,
-                    countryForRequest
+                    SITE_COUNTRY
                 );
 
         const [
@@ -991,8 +536,7 @@ async function loadPlaceData(
         ]);
 
         /*
-         * Ignore stale request if the user
-         * changed countries while loading.
+         * Ignore stale request.
          */
         if (
             currentCountry !== countryForRequest ||
@@ -1031,10 +575,6 @@ async function loadPlaceData(
             error
         );
 
-        /*
-         * The request may have failed after a newer country request
-         * took ownership of this cache entry. Do not overwrite it.
-         */
         if (
             currentCountry !== countryForRequest ||
             countryLoadGeneration !== requestGeneration ||
@@ -1072,44 +612,50 @@ async function loadPlaceData(
 
 
 // ============================================================
-// NOMINATIM + SECOND GEOCODER
+// JAPAN-ONLY LOCATION LOOKUP
 // ============================================================
 
 async function getPlaceLocation(
     place,
-    countryCode
+    countryCode = SITE_COUNTRY
 ) {
 
     /*
-     * Yahoo Local Search has strong Japan POI and address coverage.
-     * Its terms prohibit persistent caching, so results are used for
-     * this page load only before falling back to general geocoders.
+     * The site is Japan-only.
+     *
+     * Yahoo Japan is the first choice because it has strong
+     * Japanese POI/address coverage.
      */
-    if (countryCode === "JP") {
-
-        const yahooLocation =
-            await getYahooJapanLocation(
-                place
-            );
-
-        if (yahooLocation) {
-            return yahooLocation;
-        }
-    }
-
-    const countryName =
-        getCountryName(
-            countryCode
+    const yahooLocation =
+        await getYahooJapanLocation(
+            place
         );
 
-    let searchText =
-        place.name;
+    if (yahooLocation) {
 
-    if (countryName) {
+        /*
+         * Never trust an external result blindly.
+         * Yahoo results must confirm Japan.
+         */
+        if (
+            yahooLocation.country ===
+            SITE_COUNTRY
+        ) {
+            return yahooLocation;
+        }
 
-        searchText =
-            `${place.name}, ${countryName}`;
+        console.warn(
+            `Rejected non-Japan Yahoo result for "${place.name}".`
+        );
     }
+
+
+    // --------------------------------------------------------
+    // NOMINATIM
+    // --------------------------------------------------------
+
+    const searchText =
+        `${place.name}, ${SITE_COUNTRY_NAME}`;
 
     const url =
         "https://nominatim.openstreetmap.org/search" +
@@ -1119,7 +665,8 @@ async function getPlaceLocation(
         ) +
         "&format=jsonv2" +
         "&limit=1" +
-        "&addressdetails=1";
+        "&addressdetails=1" +
+        "&countrycodes=jp";
 
     try {
 
@@ -1138,7 +685,7 @@ async function getPlaceLocation(
 
         /*
          * Nominatim found nothing.
-         * Try Open-Meteo.
+         * Try Open-Meteo, but only accept Japan.
          */
         if (
             !Array.isArray(results) ||
@@ -1152,8 +699,23 @@ async function getPlaceLocation(
             const fallback =
                 await getCountryFromOpenMeteo(
                     place.name,
-                    countryCode
+                    SITE_COUNTRY
                 );
+
+            if (
+                !fallback ||
+                fallback.countryCode !==
+                    SITE_COUNTRY
+            ) {
+
+                return {
+                    address:
+                        ADDRESS_PLACEHOLDER,
+                    lat: null,
+                    lng: null,
+                    country: null
+                };
+            }
 
             return {
 
@@ -1161,16 +723,15 @@ async function getPlaceLocation(
                     ADDRESS_PLACEHOLDER,
 
                 lat:
-                    fallback?.latitude ??
+                    fallback.latitude ??
                     null,
 
                 lng:
-                    fallback?.longitude ??
+                    fallback.longitude ??
                     null,
 
                 country:
-                    fallback?.countryCode ??
-                    null
+                    SITE_COUNTRY
             };
         }
 
@@ -1181,10 +742,10 @@ async function getPlaceLocation(
             result.address || {};
 
         /*
-         * First choice:
-         * Nominatim ISO country code.
+         * Nominatim must explicitly identify
+         * the result as Japan.
          */
-        let detectedCountry =
+        const detectedCountry =
             address.country_code
                 ? String(
                     address.country_code
@@ -1194,47 +755,28 @@ async function getPlaceLocation(
                 : null;
 
         /*
-         * Second choice:
-         * Nominatim country name.
+         * HARD JAPAN-ONLY CHECK.
+         *
+         * If Nominatim gives us anything other than JP,
+         * reject the result completely.
          */
         if (
-            !detectedCountry &&
-            address.country
+            detectedCountry !==
+            SITE_COUNTRY
         ) {
 
-            detectedCountry =
-                countryNameToISO(
-                    address.country
-                );
-        }
-
-        /*
-         * Third choice:
-         * Open-Meteo only when Nominatim
-         * could not identify the country.
-         */
-        let fallback =
-            null;
-
-        if (!detectedCountry) {
-
             console.warn(
-                `Nominatim could not identify country for "${place.name}". Trying Open-Meteo.`
+                `Rejected non-Japan Nominatim result for "${place.name}".`,
+                result
             );
 
-            fallback =
-                await getCountryFromOpenMeteo(
-                    place.name,
-                    countryCode
-                );
-
-            if (
-                fallback?.countryCode
-            ) {
-
-                detectedCountry =
-                    fallback.countryCode;
-            }
+            return {
+                address:
+                    ADDRESS_PLACEHOLDER,
+                lat: null,
+                lng: null,
+                country: detectedCountry
+            };
         }
 
         const latitude =
@@ -1242,20 +784,14 @@ async function getPlaceLocation(
                 ? parseFloat(
                     result.lat
                 )
-                : (
-                    fallback?.latitude ??
-                    null
-                );
+                : null;
 
         const longitude =
             result.lon
                 ? parseFloat(
                     result.lon
                 )
-                : (
-                    fallback?.longitude ??
-                    null
-                );
+                : null;
 
         return {
 
@@ -1270,7 +806,7 @@ async function getPlaceLocation(
                 longitude,
 
             country:
-                detectedCountry
+                SITE_COUNTRY
         };
 
     } catch (error) {
@@ -1282,13 +818,29 @@ async function getPlaceLocation(
 
         /*
          * Nominatim completely failed.
-         * Use Open-Meteo.
+         *
+         * Open-Meteo is only allowed to return JP.
          */
         const fallback =
             await getCountryFromOpenMeteo(
                 place.name,
-                countryCode
+                SITE_COUNTRY
             );
+
+        if (
+            !fallback ||
+            fallback.countryCode !==
+                SITE_COUNTRY
+        ) {
+
+            return {
+                address:
+                    ADDRESS_PLACEHOLDER,
+                lat: null,
+                lng: null,
+                country: null
+            };
+        }
 
         return {
 
@@ -1296,16 +848,15 @@ async function getPlaceLocation(
                 ADDRESS_PLACEHOLDER,
 
             lat:
-                fallback?.latitude ??
+                fallback.latitude ??
                 null,
 
             lng:
-                fallback?.longitude ??
+                fallback.longitude ??
                 null,
 
             country:
-                fallback?.countryCode ??
-                null
+                SITE_COUNTRY
         };
     }
 }
@@ -1324,8 +875,7 @@ async function getYahooJapanLocation(
     }
 
     /*
-     * Avoid a burst of simultaneous browser requests. Yahoo can
-     * restrict short periods of heavy traffic on its free service.
+     * Avoid a burst of simultaneous browser requests.
      */
     const previousRequest =
         yahooRequestQueue;
@@ -1400,7 +950,9 @@ async function getYahooJapanLocation(
                 data => {
 
                     const feature =
-                        Array.isArray(data?.Feature)
+                        Array.isArray(
+                            data?.Feature
+                        )
                             ? data.Feature[0]
                             : null;
 
@@ -1431,10 +983,17 @@ async function getYahooJapanLocation(
                     }
 
                     const location = {
+
                         address,
-                        lat: latitude,
-                        lng: longitude,
-                        country: "JP"
+
+                        lat:
+                            latitude,
+
+                        lng:
+                            longitude,
+
+                        country:
+                            SITE_COUNTRY
                     };
 
                     finish(location);
@@ -1465,7 +1024,7 @@ async function getYahooJapanLocation(
 
 async function getCountryFromOpenMeteo(
     placeName,
-    countryCode
+    countryCode = SITE_COUNTRY
 ) {
 
     try {
@@ -1505,8 +1064,8 @@ async function getCountryFromOpenMeteo(
         }
 
         /*
-         * Prefer a result matching
-         * the selected country.
+         * Only accept a result whose country code
+         * explicitly matches Japan.
          */
         const matchingResult =
             data.results.find(
@@ -1517,38 +1076,36 @@ async function getCountryFromOpenMeteo(
                         String(
                             result.country_code
                         ).toUpperCase() ===
-                        String(
-                            countryCode
-                        ).toUpperCase()
+                        SITE_COUNTRY
                     );
                 }
             );
 
-        if (matchingResult) {
+        if (!matchingResult) {
 
-            return {
+            /*
+             * Do NOT blindly accept the first result.
+             */
+            console.warn(
+                `Open-Meteo found no Japan result for "${placeName}".`
+            );
 
-                countryCode:
-                    String(
-                        matchingResult
-                            .country_code
-                    ).toUpperCase(),
-
-                latitude:
-                    matchingResult.latitude ??
-                    null,
-
-                longitude:
-                    matchingResult.longitude ??
-                    null
-            };
+            return null;
         }
 
-        /*
-         * Do not blindly accept the first
-         * result for ambiguous place names.
-         */
-        return null;
+        return {
+
+            countryCode:
+                SITE_COUNTRY,
+
+            latitude:
+                matchingResult.latitude ??
+                null,
+
+            longitude:
+                matchingResult.longitude ??
+                null
+        };
 
     } catch (error) {
 
@@ -1563,137 +1120,18 @@ async function getCountryFromOpenMeteo(
 
 
 // ============================================================
-// COUNTRY NAME → ISO CODE
-// ============================================================
-
-function countryNameToISO(
-    countryName
-) {
-
-    if (!countryName) {
-        return null;
-    }
-
-    const normalized =
-        String(countryName)
-            .trim()
-            .toLowerCase();
-
-    /*
-     * Use the existing country list.
-     */
-    for (
-        const regionKey in countryRegions
-    ) {
-
-        const countries =
-            countryRegions[regionKey]
-                .countries;
-
-        for (
-            const [
-                code,
-                country
-            ] of Object.entries(
-                countries
-            )
-        ) {
-
-            if (
-                String(
-                    country.name
-                )
-                    .trim()
-                    .toLowerCase() ===
-                normalized
-            ) {
-
-                return code.toUpperCase();
-            }
-        }
-    }
-
-    /*
-     * Common alternate names.
-     */
-    const aliases = {
-
-        "united states of america":
-            "US",
-
-        "usa":
-            "US",
-
-        "u.s.a.":
-            "US",
-
-        "south korea":
-            "KR",
-
-        "republic of korea":
-            "KR",
-
-        "korea, republic of":
-            "KR",
-
-        "czech republic":
-            "CZ",
-
-        "czechia":
-            "CZ",
-
-        "russian federation":
-            "RU",
-
-        "turkey":
-            "TR",
-
-        "türkiye":
-            "TR",
-
-        "united kingdom":
-            "GB",
-
-        "great britain":
-            "GB",
-
-        "hong kong":
-            "HK",
-
-        "macao":
-            "MO",
-
-        "macau":
-            "MO"
-    };
-
-    return (
-        aliases[normalized] ||
-        null
-    );
-}
-
-
-// ============================================================
 // WIKIPEDIA
 // ============================================================
 
 async function getWikipediaDescription(
     place,
-    countryCode
+    countryCode = SITE_COUNTRY
 ) {
 
     try {
 
-        const countryName =
-            getCountryName(
-                countryCode
-            );
-
         const searchText =
-            countryName
-                ? `${place.name} ${countryName}`
-                : place.name;
+            `${place.name} ${SITE_COUNTRY_NAME}`;
 
         const searchURL =
             "https://en.wikipedia.org/w/rest.php/v1/search/page" +
@@ -1788,26 +1226,21 @@ async function getWikipediaDescription(
         return DESCRIPTION_PLACEHOLDER;
     }
 }
+
+
 // ============================================================
 // WIKIMEDIA COMMONS
 // ============================================================
 
 async function getWikimediaImage(
     place,
-    countryCode
+    countryCode = SITE_COUNTRY
 ) {
 
     try {
 
-        const countryName =
-            getCountryName(
-                countryCode
-            );
-
         const searchText =
-            countryName
-                ? `${place.name} ${countryName}`
-                : place.name;
+            `${place.name} ${SITE_COUNTRY_NAME}`;
 
         const url =
             "https://commons.wikimedia.org/w/api.php" +
@@ -1885,10 +1318,6 @@ async function getWikimediaImage(
             let score =
                 0;
 
-            /*
-             * Strong match when the entire
-             * place name occurs in the title.
-             */
             if (
                 title.includes(
                     normalizedName
@@ -2224,57 +1653,85 @@ function renderCards() {
         getCandidatePlaces();
 
     /*
-     * Filter by country only after
-     * geocoding has completed.
+     * HARD JAPAN-ONLY FILTER.
+     *
+     * A recommendation is displayed only when:
+     *
+     * 1. places.json explicitly declares JP, OR
+     * 2. the API lookup has completed and confirmed JP.
+     *
+     * Unknown countries are NOT displayed once loading completes.
      */
-const visiblePlaces = candidates.filter((place) => {
+    const visiblePlaces =
+        candidates.filter(
+            place => {
+
+                /*
+                 * Online-only recommendations such as meetups
+                 * may already declare their country in places.json.
+                 */
+                if (place.country) {
+
+                    return (
+                        String(
+                            place.country
+                        ).toUpperCase() ===
+                        SITE_COUNTRY
+                    );
+                }
+
+                const cache =
+                    placeCache[place.id];
+
+                /*
+                 * Still loading:
+                 * temporarily show the skeleton.
+                 */
+                if (
+                    !cache ||
+                    !cache.loaded ||
+                    cache.countryCode !== SITE_COUNTRY ||
+                    cache.generation !== countryLoadGeneration
+                ) {
+
+                    return true;
+                }
+
+                /*
+                 * Completed lookup must explicitly
+                 * confirm Japan.
+                 */
+                if (
+                    cache.location &&
+                    cache.location.country ===
+                        SITE_COUNTRY
+                ) {
+
+                    return true;
+                }
+
+                /*
+                 * Anything that cannot be confirmed
+                 * as Japan is rejected.
+                 */
+                return false;
+            }
+        );
+
     /*
-     * Online-only recommendations such as meetups may
-     * not have a physical search result. When the source
-     * data already declares their country, trust it.
+     * Sort cards alphabetically by name.
      */
-    if (place.country) {
-        return place.country === currentCountry;
-    }
+    visiblePlaces.sort(
+        (a, b) =>
+            a.name.localeCompare(
+                b.name,
+                undefined,
+                {
+                    sensitivity: "base"
+                }
+            )
+    );
 
-    const cache = placeCache[place.id];
-
-    if (
-        cache &&
-        cache.loaded &&
-        cache.countryCode === currentCountry &&
-        cache.generation === countryLoadGeneration &&
-        cache.location
-    ) {
-        /*
-         * If country is known,
-         * filter normally.
-         */
-        if (cache.location.country) {
-            return cache.location.country === currentCountry;
-        }
-
-        /*
-         * A completed lookup must confirm the selected
-         * country. Keeping an unknown result here lets
-         * recommendations from a previous country remain
-         * visible after a country switch.
-         */
-        return false;
-    }
-
-    /*
-     * Still loading.
-     */
-    return true;
-});
-
-/*
- * Sort cards alphabetically by name.
- */
-visiblePlaces.sort((a, b) =>
-    a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
-);
     if (resultCount) {
 
         resultCount.textContent =
@@ -2321,7 +1778,7 @@ visiblePlaces.sort((a, b) =>
             if (
                 !cache ||
                 !cache.loaded ||
-                cache.countryCode !== currentCountry ||
+                cache.countryCode !== SITE_COUNTRY ||
                 cache.generation !== countryLoadGeneration
             ) {
 
@@ -2383,27 +1840,6 @@ visiblePlaces.sort((a, b) =>
             // IMAGE
             // ------------------------------------------------
 
-            /*
-             * No fallback image exists.
-             *
-             * Restaurants:
-             *     no image
-             *
-             * Hobbies:
-             *     no image
-             *
-             * Nightlife:
-             *     no image
-             *
-             * Meetups:
-             *     no image
-             *
-             * Other categories:
-             *     Wikimedia image if found
-             *
-             * If Wikimedia returns null:
-             *     no image
-             */
             const image =
                 shouldSkipImage(
                     place
@@ -2638,20 +2074,6 @@ async function copyAddress(
 // URL PARAMETERS
 // ============================================================
 
-function getCountryFromURL() {
-
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
-
-    return (
-        params.get("country") ||
-        ""
-    ).toUpperCase();
-}
-
-
 function getCategoryFromURL() {
 
     const params =
@@ -2673,13 +2095,10 @@ function updateURL() {
             window.location.search
         );
 
-    if (currentCountry) {
-
-        params.set(
-            "country",
-            currentCountry
-        );
-    }
+    /*
+     * Country is no longer a URL parameter.
+     */
+    params.delete("country");
 
     if (
         currentCategory &&
