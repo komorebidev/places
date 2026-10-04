@@ -3,12 +3,6 @@
 
 ## Features
 
-* 🌎 **Country-based recommendations**
-
-  * Organizes places by country and region.
-  * Supports **North America, Europe, and Asia**.
-  * Automatically detects the visitor's country when possible.
-
 * 🗂️ **Category filtering**
 
   * Filter places by categories such as:
